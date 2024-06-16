@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightcyan;
+            margin: 0px;
+        }
+
+        header {
+            background-color: rgba(88, 224, 190, 0.925);
+            padding: 10px;
+            margin: 10px;
+            border-radius: 7px;
+        }
+
+        nav {
+            background-color: darkslategray;
+            padding: 2px;
+            color: white;
+            box-shadow: 5px 3px 7px rgba(0, 0, 0, 0.336);
+            /*Usar o Devtools para testar sombras*/
+            border-radius: 5px;
+        }
+
+        nav > a {
+            text-decoration: none;
+            margin-right: 60px;
+            color: white;
+        }
+
+        nav > a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            background-color: rgb(108, 228, 198);
+            padding: 10px;
+            margin: 10px;
+            border-radius: 15px;
+        }
+
+        nav > p {
+            display: inline;
+            margin-right: 30px;
+        }
+
+        article {
+            background-color: rgb(210, 240, 237);
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        article > aside {
+            background-color: rgb(156, 231, 225);
+        }
+
+        footer {
+            background-color: darkslategrey;
+            color: white;
+            padding: 5px;
+            margin: 0px;
+            text-align: center;
+            border-radius: 6px;
+        }
+
+        footer > p {
+            margin: 0px;
+        }
+
+        /*
+        div#bola {
+            height: 100px;
+            width: 100px;
+           background-color: darkslategray;
+           margin: 10px;
+           border-radius: 50%;
+
+           <div id="bola"></div>
+        }                                            */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu 1° site</h1>
+        <nav>
+            <a href="https://youtube.com/cursoemvideo" target="_blank">Youtube</a>
+            <a href="https://gustavoguanabara.github.io" target="_blank">GitHub</a>
+            <a href="https://www.cursoemvideo.com" target="_blank">Site</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <nav class="assuntos">
+                <p>Esportes</p>
+                <p>Política</p> 
+                <p>Tecnologia</p>
+            </nav>
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Notícia sobre o Brasil</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates unde corporis voluptatibus fugiat sequi voluptate quae, quisquam eum delectus aspernatur vitae veritatis corrupti rerum debitis autem nulla a! Nam, fuga.</p>
+                <aside>
+                    <p>Artigo escrito por: Ciclano</p>
+                </aside>
+            </article>
+            <article>
+                <h2>Caos no futebol brasileiro</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At error minus illo magnam vero laborum cum repellendus fugiat excepturi architecto minima explicabo odit adipisci voluptatibus ut, sed quasi, incidunt beatae.</p>
+                <aside>
+                    <p>Artigo escrito por: Beltrano</p>
+                </aside>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por: Carol</p>
+    </footer>
+     
+</body>
+</html>
