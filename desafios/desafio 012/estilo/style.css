@@ -1,5 +1,21 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'Xilosa';
+    src: url(fonte/xilosa_.ttf);
+}
+
+@font-face {
+    font-family: "Caveat Brush";
+    src: url(fonte/CaveatBrush-Regular.ttf);
+}
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: "Xilosa", cursive;
+    --fonte3: "Caveat Brush", cursive;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -8,6 +24,7 @@
 html, body {
     min-height: 100vh;
     background-color: darkgray;
+    font-family: var(--fonte1);
 }
 
 header {
@@ -20,6 +37,8 @@ header > h1 {
     padding-top: 50px;
     font-variant: small-caps;  /**/
     /*text-transform: uppercase; -> deixar todas letras maiuculas*/
+    font-family: var(--fonte2);
+    font-size: 9.5vw;
 }
 
 header > p {
@@ -41,6 +60,8 @@ section {
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 1.7em;
 }
 
 section.normal {
@@ -54,7 +75,8 @@ section.imagem {
 }
 
 section.imagem > p {
-    width: 400px;
+    display: inline-block;
+    padding: 8px;
     background-color: rgba(0, 0, 0, 0.253);
 }
 
