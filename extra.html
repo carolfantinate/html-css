@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +11,14 @@
             text-align: center;
             background-color: #f4f4f4;
         }
+
         .container {
             max-width: 100%;
             margin: 20px auto;
             padding: 10px;
             overflow-x: auto;
         }
+
         .month {
             background: white;
             padding: 10px;
@@ -23,6 +26,7 @@
             border-radius: 8px;
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
         }
+
         .month h2 {
             margin: 0;
             padding: 10px 0;
@@ -30,6 +34,7 @@
             color: white;
             border-radius: 5px;
         }
+
         .days {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
@@ -40,15 +45,18 @@
             overflow-x: auto;
             box-sizing: border-box;
         }
+
         .day {
             background: #ddd;
             padding: 10px;
             border-radius: 5px;
             text-align: center;
         }
+
         .highlight {
             background: #de8888 !important;
         }
+
         .weekday {
             font-weight: bold;
             background: #bfbfbf;
@@ -56,29 +64,28 @@
             border-radius: 5px;
             text-align: center;
         }
+
         @media (max-width: 600px) {
             .days {
                 display: grid;
                 grid-template-columns: repeat(7, minmax(30px, 1fr));
                 gap: 2px;
             }
-            .day, .weekday {
+
+            .day,
+            .weekday {
                 padding: 5px;
                 font-size: 12px;
             }
         }
 
-        .legenda{
+        .legenda {
             display: flex;
             justify-content: center;
             margin-top: 20px;
         }
 
-        .legenda h2{
-            align-self: center;
-        }
-
-        .dt{
+        .dt {
             background: #de8888;
             color: white;
             padding: 10px;
@@ -88,7 +95,7 @@
             margin-top: 30px;
         }
 
-        .folga{
+        .folga {
             background: #ddd;
             color: rgb(52, 52, 52);
             padding: 10px;
@@ -99,12 +106,13 @@
         }
     </style>
 </head>
+
 <body>
     <div class="legenda">
         <div class="dt">Dia de trabalho</div>
         <div class="folga">Folga</div>
     </div>
-    
+
     <div class="container" id="calendar"></div>
     <script>
         function generateCalendar(year) {
@@ -115,17 +123,18 @@
             let highlightStart = new Date(year, 1, 20); // 20 de Fevereiro
             let currentDate = new Date();
             months.forEach((month, index) => {
+                let firstDayOfMonth = new Date(year, index, 1).getDay(); // Dia da semana do primeiro dia do mês
                 let lastDayOfMonth = new Date(year, index + 1, 0);
                 if (lastDayOfMonth < currentDate) return; // Remove mês passado
-                
+
                 let monthDiv = document.createElement("div");
                 monthDiv.classList.add("month");
                 let title = document.createElement("h2");
-                title.textContent = `${month}`;
+                title.textContent = `${month} ${year}`;
                 monthDiv.appendChild(title);
                 let daysDiv = document.createElement("div");
                 daysDiv.classList.add("days");
-                
+
                 // Adiciona os dias da semana
                 weekdays.forEach(weekday => {
                     let dayHeader = document.createElement("div");
@@ -133,7 +142,15 @@
                     dayHeader.textContent = weekday;
                     daysDiv.appendChild(dayHeader);
                 });
-                
+
+                // Adiciona espaços em branco até o primeiro dia do mês
+                for (let i = 0; i < firstDayOfMonth; i++) {
+                    let emptyDay = document.createElement("div");
+                    emptyDay.classList.add("day");
+                    emptyDay.style.visibility = "hidden";
+                    daysDiv.appendChild(emptyDay);
+                }
+
                 let daysInMonth = lastDayOfMonth.getDate();
                 for (let i = 1; i <= daysInMonth; i++) {
                     let day = document.createElement("div");
@@ -154,4 +171,5 @@
         setInterval(() => generateCalendar(2025), 86400000); // Atualiza diariamente
     </script>
 </body>
+
 </html>
