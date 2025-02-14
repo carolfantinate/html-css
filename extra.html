@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário 2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 100%;
+            margin: 20px auto;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        .month {
+            background: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+        .month h2 {
+            margin: 0;
+            padding: 10px 0;
+            background: #d79999;
+            color: white;
+            border-radius: 5px;
+        }
+        .days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            padding: 10px;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: auto;
+            box-sizing: border-box;
+        }
+        .day {
+            background: #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .highlight {
+            background: #de8888 !important;
+        }
+        .weekday {
+            font-weight: bold;
+            background: #bfbfbf;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            .days {
+                display: grid;
+                grid-template-columns: repeat(7, minmax(30px, 1fr));
+                gap: 2px;
+            }
+            .day, .weekday {
+                padding: 5px;
+                font-size: 12px;
+            }
+        }
+
+        .legenda{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .legenda h2{
+            align-self: center;
+        }
+
+        .dt{
+            background: #de8888;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            width: 150px;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        .folga{
+            background: #ddd;
+            color: rgb(52, 52, 52);
+            padding: 10px;
+            border-radius: 5px;
+            width: 100px;
+            margin: auto;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="legenda">
+        <div class="dt">Dia de trabalho</div>
+        <div class="folga">Folga</div>
+    </div>
+    
+    <div class="container" id="calendar"></div>
+    <script>
+        function generateCalendar(year) {
+            const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+            const weekdays = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+            const calendarDiv = document.getElementById("calendar");
+            calendarDiv.innerHTML = "";
+            let highlightStart = new Date(year, 1, 20); // 20 de Fevereiro
+            let currentDate = new Date();
+            months.forEach((month, index) => {
+                let lastDayOfMonth = new Date(year, index + 1, 0);
+                if (lastDayOfMonth < currentDate) return; // Remove mês passado
+                
+                let monthDiv = document.createElement("div");
+                monthDiv.classList.add("month");
+                let title = document.createElement("h2");
+                title.textContent = `${month}`;
+                monthDiv.appendChild(title);
+                let daysDiv = document.createElement("div");
+                daysDiv.classList.add("days");
+                
+                // Adiciona os dias da semana
+                weekdays.forEach(weekday => {
+                    let dayHeader = document.createElement("div");
+                    dayHeader.classList.add("weekday");
+                    dayHeader.textContent = weekday;
+                    daysDiv.appendChild(dayHeader);
+                });
+                
+                let daysInMonth = lastDayOfMonth.getDate();
+                for (let i = 1; i <= daysInMonth; i++) {
+                    let day = document.createElement("div");
+                    day.classList.add("day");
+                    day.textContent = i;
+                    let currentDay = new Date(year, index, i);
+                    let diffDays = Math.floor((currentDay - highlightStart) / (1000 * 60 * 60 * 24));
+                    if (diffDays >= 0 && Math.floor(diffDays / 2) % 2 === 0) {
+                        day.classList.add("highlight");
+                    }
+                    daysDiv.appendChild(day);
+                }
+                monthDiv.appendChild(daysDiv);
+                calendarDiv.appendChild(monthDiv);
+            });
+        }
+        generateCalendar(2025);
+        setInterval(() => generateCalendar(2025), 86400000); // Atualiza diariamente
+    </script>
+</body>
+</html>
