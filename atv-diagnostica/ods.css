@@ -28,6 +28,15 @@ a {
   border-radius: 10px;
 }
 
+.container{
+  margin: 45px auto;
+  display: grid;
+  width: 1000px;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  
+}
+
 .flip {
   position: relative;
 
@@ -85,8 +94,8 @@ a {
   position: relative;
   display: inline-block;
   margin-right: 2px;
-  margin-bottom: 1em;
-  width: 200px;
+  margin-bottom: 7px;
+  width: 165px;
 
   >.front,
   >.back {
@@ -95,15 +104,14 @@ a {
     width: inherit;
     background-size: cover !important;
     background-position: center !important;
-    height: 220px;
-    padding: 1em 2em;
+    height: 165px;
+    padding: 10px 10px;
     background: #313131;
     border-radius: 10px;
 
     p {
-      font-size: 0.9125rem;
-      line-height: 160%;
-      color: #999;
+      font-size: 0.865rem;
+      color: #c0c0c0;
     }
   }
 }
