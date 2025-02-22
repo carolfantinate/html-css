@@ -19,11 +19,6 @@ a {
     color: inherit;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 button, input, select, textarea {
     background: transparent;
     border: none;
@@ -41,11 +36,5 @@ hr {
     border: none;
     border-top: 1px solid #ccc;
     margin: 20px 0;
-}
-
-/* Estilos opcionais */
-body {
-    background-color: #fff;
-    color: #333;
 }
 

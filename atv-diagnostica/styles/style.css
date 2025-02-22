@@ -1,8 +1,4 @@
-body{
-    height: 900px;
-}
-
-header{
+header {
     background-color: #5f7a5f;
     color: white;
     display: flex;
@@ -15,43 +11,118 @@ header>nav {
     align-self: center;
 }
 
-a{
+nav a {
     margin-right: 20px;
 }
 
-.simbolo{
-    width: 300px;
-}
-
-section{
-    display: flex;
-    margin-top: 80px;
+section {
+    display: grid;
+    margin: 80px 80px 0px 80px;
+    gap: 30px;
     justify-content: space-evenly;
-    gap: 20px;
+    grid-column: 2;
 }
 
-.textos{
-    width: 515px;
+.textos-onu {
+    grid-column: 2;
+    width: 550px;
 }
 
-.nav:hover{
+.textos-ods {
+    grid-column: 1;
+    width: 550px;
+}
+
+.nav:hover {
     font-weight: bold;
     padding: 10px;
     background-color: #4c5f4c;
     border-radius: 10px;
 }
 
-.atual{
+.atual {
     padding: 10px;
     background-color: #5a645a;
     border-radius: 10px;
 }
-.titulo{
+
+.titulo {
     font-size: 35px;
+    margin-bottom: 10px;
     color: #354135;
 }
 
-.onu{
+.img-onu {
     width: 400px;
     border-radius: 20px;
+}
+
+.img-ods {
+    width: 300px;
+    grid-column: 2;
+}
+
+blockquote {
+    font-size: 1.1em;
+    width: 100%;
+    font-family: Open Sans;
+    font-style: italic;
+    color: #555555;
+    padding: 1.2em 30px 1.2em 75px;
+    border-left: 8px solid #5f7a5f;
+    line-height: 1.6;
+    position: relative;
+    background: #EDEDED;
+}
+
+blockquote::before {
+    font-family: Arial;
+    content: "\201C";
+    color: #5f7a5f;
+    font-size: 4em;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+}
+
+blockquote::after {
+    content: '';
+}
+
+blockquote span {
+    display: block;
+    color: #4e4e4e;
+    text-align: right;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+a.link{
+    color: #5f7a5f;
+    font-weight: bold;
+}
+
+a.link:hover{
+    color: #354135;
+    text-decoration: underline;
+
+}
+
+footer{
+    background-color: #5f7a5f;
+    color: #e4e4e4;
+    padding: 15px 0 15px 20px;
+    bottom: 0;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.ref{
+    display: flex;
+    gap: 50px;
+}
+
+.link-ref:hover{
+    text-decoration: underline;
 }
