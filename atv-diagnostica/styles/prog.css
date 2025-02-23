@@ -1,5 +1,5 @@
-body{
-    height: 1450px;
+body {
+    height: 1560px;
 }
 
 header {
@@ -32,8 +32,23 @@ nav a {
     border-radius: 10px;
 }
 
+.title,
+.subtitle {
+    text-align: center;
+}
+
+.title {
+    font-size: 35px;
+    margin-bottom: 15px;
+    color: #354135;
+}
+
+.subtitle {
+    margin-bottom: 40px;
+}
+
 main {
-    margin: 60px;
+    margin: 25px auto;
 }
 
 .new {
@@ -44,12 +59,12 @@ main {
     grid-column: 2;
 }
 
-.new a{
+.new a {
     display: grid;
     gap: 30px;
 }
 
-.new a img{
+.new a img {
     width: 350px;
     grid-column: 1;
     border-radius: 15px;
@@ -60,26 +75,37 @@ main {
     grid-column: 2;
 }
 
-.textos p{
+.textos p {
     color: #5d6d5d;
     width: 450px;
 }
 
-.textos h2{
+.textos h2 {
     color: #283728;
     width: 480px;
 }
 
-hr{
+.textos span {
+    color: #afb3af;
+    font-size: 13px;
+}
+
+hr {
     width: 60%;
     margin: 30px auto;
 }
 
-.new a img:hover{
-    transform: scale(1.1);
-    transition: 0.5s;
-}
+.new a:hover {
+    >.textos h2 {
+        text-decoration: underline;
+    }
 
-.textos h2:hover{
-    text-decoration: underline;
+    >.textos p {
+        color: #2a332a;
+    }
+
+    >img {
+        transform: scale(1.09);
+        transition: 0.5s;
+    }
 }

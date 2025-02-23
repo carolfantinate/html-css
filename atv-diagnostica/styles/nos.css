@@ -38,6 +38,12 @@ section{
     width: 515px;
 }
 
+.titulo {
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: #354135;
+}
+
 .logos{
     margin-top: 15px;
     display: flex;
@@ -57,4 +63,93 @@ section{
 .img-nos{
     width: 250px;
     border-radius: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.513);
+}
+
+.seta-c{
+    position: absolute;
+    width: 120px;
+    z-index: 2;
+    rotate: 10deg;
+    left: 480px;
+    top: 215px;
+}
+
+.seta-b{
+    position: absolute;
+    width: 120px;
+    z-index: 2;
+    rotate: 210deg;
+    left: 160px;
+    top: 330px;
+}
+
+.carol {
+    width: 90px;
+    position: absolute;
+    z-index: 2;
+    left: 520px;
+    top: 185px;
+}
+
+.bea{
+    width: 90px;
+    position: absolute;
+    z-index: 2;
+    left: 130px;
+    top: 435px;
+}
+
+.flor1{
+    width: 90px;
+    position: absolute;
+    z-index: 2;
+    left: 215px;
+    top: 120px;
+}
+
+.flor2{
+    width: 50px;
+    position: absolute;
+    z-index: 2;
+    left: 220px;
+    top: 210px;
+}
+
+.nossa-imagem:hover{
+    > .img-nos{
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+
+    > .seta-c, .seta-b{
+        transform: scale(1.08);
+        transition: 0.5s;
+    }
+
+    > .carol{
+        transform: scale(1.1);
+        left: 530px;
+        top: 180px;
+        transition: 0.5s;
+    }
+
+    > .bea{
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+
+    > .flor1{
+        transform: scale(1.1);
+        top: 100px;
+        left: 210px;
+        transition: 0.5s;
+    }
+
+    >.flor2{
+        transform: scale(1.1);
+        top: 210px;
+        left: 215px;
+        transition: 0.5s;
+    }
 }

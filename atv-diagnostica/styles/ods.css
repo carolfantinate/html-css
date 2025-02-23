@@ -16,7 +16,7 @@ header>nav {
   align-self: center;
 }
 
-a {
+nav a {
   margin-right: 20px;
 }
 
@@ -118,5 +118,14 @@ a {
       font-size: 0.865rem;
       color: #c0c0c0;
     }
+  }
+}
+
+.extra{
+  >.front,
+  >.back {
+    color: rgb(159, 159, 159);
+    background: #d6d6d6;
+    border-radius: 10px;
   }
 }
