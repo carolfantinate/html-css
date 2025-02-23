@@ -1,14 +1,13 @@
+body{
+  overflow-y: hidden;
+}
+
 header {
   background-color: #5f7a5f;
   color: white;
   display: flex;
-  justify-content: right;
-  padding: 20px;
-
-  > img.logo {
-    width: 50px;
-    margin-right: 20px;
-  }
+  justify-content: space-between;
+  padding: 15px;
 }
 
 header>nav {
@@ -33,10 +32,20 @@ nav a {
   border-radius: 10px;
 }
 
+.logo {
+  width: 100px;
+  margin-left: 20px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container{
-  margin: 45px auto;
+  margin: 45px 0;
   display: grid;
-  width: 1000px;
   gap: 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   

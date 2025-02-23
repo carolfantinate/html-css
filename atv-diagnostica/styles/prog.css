@@ -6,8 +6,8 @@ header {
     background-color: #5f7a5f;
     color: white;
     display: flex;
-    justify-content: right;
-    padding: 20px;
+    justify-content: space-between;
+    padding: 15px;
 }
 
 header>nav {
@@ -30,6 +30,11 @@ nav a {
     padding: 10px;
     background-color: #5a645a;
     border-radius: 10px;
+}
+
+.logo {
+    width: 100px;
+    margin-left: 20px;
 }
 
 .title,

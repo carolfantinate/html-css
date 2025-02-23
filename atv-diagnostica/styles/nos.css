@@ -2,8 +2,8 @@ header{
     background-color: #5f7a5f;
     color: white;
     display: flex;
-    justify-content: right;
-    padding: 20px;
+    justify-content: space-between;
+    padding: 15px;
 }
 
 header>nav {
@@ -13,6 +13,11 @@ header>nav {
 
 a{
     margin-right: 20px;
+}
+
+.logo {
+    width: 100px;
+    margin-left: 20px;
 }
 
 .nav:hover{
