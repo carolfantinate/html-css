@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODS 3</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/ods3.css">
+</head>
+
+<body>
+    <header>
+        <img src="imgs/logo.png" alt="logo" class="logo">
+        <nav>
+            <a href="index.html" class="nav">Home</a>
+            <a href="ods.html" class="nav">ODS</a>
+            <a href="progresso.html" class="nav">Progresso</a>
+            <a href="" class="atual">ODS 3</a>
+            <a href="nos.html" class="nav">Quem somos</a>
+        </nav>
+    </header>
+
+    <main>
+        <a href="https://brasil.un.org/pt-br/sdgs/3" target="_blank"><img src="https://pactoglobal.org.br/wp-content/themes/pacto-global/storage/ods/March2019/TJH7qAaMEhmUpEviAwVA.png" alt="ods 3" class="ods-img"></a>
+        <div class="textos">
+            <h1 class="ods-title">ODS 3 - Saúde e bem-estar</h1>
+            <p class="ods-text">Garantir o acesso à saúde de qualidade e promover o bem-estar para todos, em todas as idades</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptatum aut molestias sit maxime aperiam mollitia necessitatibus iste maiores? Perspiciatis, repudiandae suscipit. Voluptas mollitia recusandae iste quae, rem placeat! Dolores!</p>
+        </div>
+    </main>
+
+    <section class="importancia">
+        <h2 class="subtitle">A importância de cuidar da saúde e bem-estar</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi unde numquam eaque error ut dicta veniam voluptates minus minima repudiandae, harum molestias odio, blanditiis quae eius, culpa similique placeat laborum.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil neque similique voluptas expedita numquam! Officia autem eum atque quam unde porro, voluptas quibusdam, recusandae numquam quaerat rem, architecto cupiditate sequi.</p>
+    </section>
+
+    <section class="imc">
+        <h2 class="subtitle">O que é IMC?</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, voluptates debitis distinctio vitae tempora pariatur rerum iure dolore? Sequi quisquam similique necessitatibus facilis minima praesentium doloribus, sed nesciunt sint repellat.</p>
+        <br>
+        <h3 class="subtitle">Calcule seu IMC:</h3>
+        <form id="imcForm" name="imcForm" onsubmit="calculadoraImc(); return false;">
+            <label for="altura">Insira sua altura (em metros):
+                <input type="number" id="altura" name="altura" step="0.01" required placeholder="Ex: 1.75" min="0.01" max="3.00">
+            </label> <br>
+        
+            <label for="peso">Insira seu peso (em kg):
+                <input type="number" id="peso" name="peso" step="0.1" required placeholder="Ex: 70.5" min="0.1" max="400">
+            </label> <br>
+        
+            <input type="submit" value="Calcular">
+        </form>
+        
+        <p id="resultadoImc"></p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Tabela de classificação do IMC</th>
+                </tr>
+            </thead>
+            <tr>
+                <th class="sub">IMC</th>
+                <th class="sub">Classificação</th>
+            </tr>
+            <tr>
+                <td>Menos de 18,5</td>
+                <td>Abaixo do peso</td>
+            </tr>
+            <tr>
+                <td>18,5 a 24,9</td>
+                <td>Peso saudável</td>
+            </tr>
+            <tr>
+                <td>25 a 29,9</td>
+                <td>Sobrepeso</td>
+            </tr>
+            <tr>
+                <td>30 a 39,9</td>
+                <td>Obesidade moderada</td>
+            </tr>
+            <tr>
+                <td>40 ou mais</td>
+                <td>Obesidade grave</td>
+            </tr>
+        </table>
+    </section>
+
+    <script>
+        const calculadoraImc = () => {
+            const altura = parseFloat(document.getElementById('altura').value);
+            const peso = parseFloat(document.getElementById('peso').value);
+            const resultadoImc = document.getElementById('resultadoImc');
+    
+            if (isNaN(altura) || altura <= 0 || isNaN(peso) || peso <= 0) {
+                resultadoImc.textContent = 'Por favor, insira valores válidos';
+                return;
+            }
+    
+            const imc = peso / (altura * altura);
+            let classificacao = '';
+    
+            if (imc < 18.5) {
+                classificacao = 'abaixo do peso';
+            } else if (imc >= 18.5 && imc < 25) {
+                classificacao = 'com o peso saudável';
+            } else if (imc >= 25 && imc < 30) {
+                classificacao = 'com sobrepeso';
+            } else if (imc >= 30 && imc < 40) {
+                classificacao = 'com obesidade moderada';
+            } else if (imc >= 40) {
+                classificacao = 'com obesidade grave';
+            }
+    
+            resultadoImc.textContent = `Seu IMC é ${imc.toFixed(2)} e você está ${classificacao}`;
+        }
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+body{
+    height: 1450px;
+}
+
+header {
+    background-color: #5f7a5f;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+header>nav {
+    text-align: right;
+    align-self: center;
+}
+
+a {
+    margin-right: 20px;
+}
+
+.logo {
+    width: 100px;
+    margin-left: 20px;
+}
+
+.nav:hover {
+    font-weight: bold;
+    padding: 10px;
+    background-color: #4c5f4c;
+    border-radius: 10px;
+}
+
+.atual {
+    padding: 10px;
+    background-color: #5a645a;
+    border-radius: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+    gap: 70px;
+    align-items: center;
+}
+
+.ods-img {
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px #35413581;
+    cursor: pointer;
+}
+
+.ods-img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.textos {
+    width: 450px;
+}
+
+.textos h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: #354135;
+}
+
+.subtitle {
+    margin-bottom: 10px;
+    color: #354135;
+}
+
+section {
+    margin: 40px auto;
+    width: 780px;
+}
+
+form {
+    margin: auto;
+    width: 300px;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #eaf0eb;
+    box-shadow: 0px 0px 10px 0px #3541355c;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #5f7a5f;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    background-color: #5f7a5f;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+p#resultadoImc{
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #2b352b;
+}
+
+table {
+    margin: 25px auto;
+    width: 500px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+thead th {
+    background-color: #98ab98;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+th,
+td {
+    padding: 8px;
+}
+
+th.sub, td {
+    color: #354135;
+    padding: 7px;
+    border-bottom: 1px solid #b8b8b8; 
+}
+
+td:nth-child(2), th.sub:nth-child(2) {
+    border-left: 0.6px solid  #b8b8b8; 
+}

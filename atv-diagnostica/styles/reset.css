@@ -27,11 +27,6 @@ button, input, select, textarea {
     line-height: inherit;
 }
 
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
 hr {
     border: none;
     border-top: 1px solid #ccc;
