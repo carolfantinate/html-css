@@ -7,6 +7,7 @@
     <title>ODS 3</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/ods3.css">
+    <link rel="shortcut icon" href="imgs/logo-fav.png" type="image/x-icon">
 </head>
 
 <body>
@@ -22,37 +23,69 @@
     </header>
 
     <main>
-        <a href="https://brasil.un.org/pt-br/sdgs/3" target="_blank"><img src="https://pactoglobal.org.br/wp-content/themes/pacto-global/storage/ods/March2019/TJH7qAaMEhmUpEviAwVA.png" alt="ods 3" class="ods-img"></a>
+        <a href="https://brasil.un.org/pt-br/sdgs/3" target="_blank"><img
+                src="https://pactoglobal.org.br/wp-content/themes/pacto-global/storage/ods/March2019/TJH7qAaMEhmUpEviAwVA.png"
+                alt="ods 3" class="ods-img"></a>
         <div class="textos">
             <h1 class="ods-title">ODS 3 - Saúde e bem-estar</h1>
-            <p class="ods-text">Garantir o acesso à saúde de qualidade e promover o bem-estar para todos, em todas as idades</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptatum aut molestias sit maxime aperiam mollitia necessitatibus iste maiores? Perspiciatis, repudiandae suscipit. Voluptas mollitia recusandae iste quae, rem placeat! Dolores!</p>
+            <p class="ods-text">"Garantir o acesso à saúde de qualidade e promover o bem-estar para todos, em todas as
+                idades."</p>
+            <p>Até 2030, a ONU, pretende, dentro desta ODS:
+            <ul class="ods-list">
+                <li>Reduzir a mortalidade materna e infantil;</li>
+                <li>Erradicar epidemias como AIDS, tuberculose e malária;</li>
+                <li>Diminuir mortes por doenças não transmissíveis e promover saúde mental;</li>
+                <li>Prevenir abuso de substâncias e reduzir acidentes de trânsito;</li>
+                <li>Garantir acesso universal à saúde sexual e reprodutiva;</li>
+                <li>Expandir a cobertura universal de saúde e acesso a medicamentos e vacinas;</li>
+                <li>Reduzir mortes por poluição e produtos químicos;</li>
+                <li>Fortalecer o controle do tabaco e incentivar pesquisa em saúde;</li>
+                <li>Aumentar financiamento e capacitação de profissionais da saúde;</li>
+                <li>Melhorar a resposta a riscos globais de saúde.</li>
+            </ul>
+            </p>
         </div>
     </main>
 
     <section class="importancia">
         <h2 class="subtitle">A importância de cuidar da saúde e bem-estar</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi unde numquam eaque error ut dicta veniam voluptates minus minima repudiandae, harum molestias odio, blanditiis quae eius, culpa similique placeat laborum.</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil neque similique voluptas expedita numquam! Officia autem eum atque quam unde porro, voluptas quibusdam, recusandae numquam quaerat rem, architecto cupiditate sequi.</p>
+        <p>O cuidado é um elemento fundamental para a vida humana em diversos aspectos. Ele abrange não apenas o cuidado
+            com a saúde física, mas também com a saúde mental, emocional e social. O ato de cuidar de si mesmo e dos
+            outros é essencial para promover uma vida saudável, feliz e significativa. <br> <br>
+            Em relação à saúde física, o cuidado é indispensável para garantir o funcionamento adequado do nosso corpo.
+            O autocuidado, que envolve práticas como alimentação balanceada, exercícios físicos regulares, descanso
+            adequado e higiene pessoal, contribui para prevenir doenças, fortalecer o sistema imunológico e promover o
+            bem-estar geral. Ao cuidar do nosso corpo, estamos investindo em nossa própria saúde e aumentando nossa
+            qualidade de vida. Quando falamos de saúde, o Índice de Massa Corporal (IMC) é uma ferramenta útil para
+            avaliar se o peso está adequado, auxiliando na prevenção de problemas como obesidade e doenças
+            cardiovasculares.</p>
     </section>
 
     <section class="imc">
         <h2 class="subtitle">O que é IMC?</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, voluptates debitis distinctio vitae tempora pariatur rerum iure dolore? Sequi quisquam similique necessitatibus facilis minima praesentium doloribus, sed nesciunt sint repellat.</p>
+        <p>O IMC (índice de massa corporal) serve para identificar e previnir doenças em todas a idades. Ele mostra o
+            que seria o peso ideal de acordo com sua altura e idade, a fim de ter uma melhor qualidade de vida. Após o
+            cálculo, ele te mostra se está magro, com o peso ideal, sobrepeso ou obeso. Quanto maior seu IMC, maior o
+            risco de doenças como pressão alta, diabetes e problemas cardíacos.
+            <br>É importante procurar um nutricionista, se estiver fora do peso ideal determinado pelo IMC.
+        </p>
         <br>
+
         <h3 class="subtitle">Calcule seu IMC:</h3>
         <form id="imcForm" name="imcForm" onsubmit="calculadoraImc(); return false;">
             <label for="altura">Insira sua altura (em metros):
-                <input type="number" id="altura" name="altura" step="0.01" required placeholder="Ex: 1.75" min="0.01" max="3.00">
+                <input type="number" id="altura" name="altura" step="0.01" required placeholder="Ex: 1.75" min="0.01"
+                    max="3.00">
             </label> <br>
-        
+
             <label for="peso">Insira seu peso (em kg):
-                <input type="number" id="peso" name="peso" step="0.1" required placeholder="Ex: 70.5" min="0.1" max="400">
+                <input type="number" id="peso" name="peso" step="0.1" required placeholder="Ex: 70.5" min="0.1"
+                    max="400">
             </label> <br>
-        
+
             <input type="submit" value="Calcular">
         </form>
-        
+
         <p id="resultadoImc"></p>
 
         <table>
@@ -93,31 +126,39 @@
             const altura = parseFloat(document.getElementById('altura').value);
             const peso = parseFloat(document.getElementById('peso').value);
             const resultadoImc = document.getElementById('resultadoImc');
-    
+            const tabela = document.querySelectorAll('table tr');
+
             if (isNaN(altura) || altura <= 0 || isNaN(peso) || peso <= 0) {
                 resultadoImc.textContent = 'Por favor, insira valores válidos';
                 return;
             }
-    
+
             const imc = peso / (altura * altura);
             let classificacao = '';
-    
+
+            tabela.forEach(linha => linha.classList.remove('destaque'));
+
             if (imc < 18.5) {
                 classificacao = 'abaixo do peso';
+                tabela[2].classList.add('destaque'); 
             } else if (imc >= 18.5 && imc < 25) {
                 classificacao = 'com o peso saudável';
+                tabela[3].classList.add('destaque'); 
             } else if (imc >= 25 && imc < 30) {
                 classificacao = 'com sobrepeso';
+                tabela[4].classList.add('destaque'); 
             } else if (imc >= 30 && imc < 40) {
                 classificacao = 'com obesidade moderada';
+                tabela[5].classList.add('destaque'); 
             } else if (imc >= 40) {
                 classificacao = 'com obesidade grave';
+                tabela[6].classList.add('destaque'); 
             }
-    
+
             resultadoImc.textContent = `Seu IMC é ${imc.toFixed(2)} e você está ${classificacao}`;
         }
     </script>
-    
+
 </body>
 
 </html>

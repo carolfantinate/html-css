@@ -1,5 +1,5 @@
 body{
-    height: 1400px;
+    height: 1755px;
 }
 
 header {
@@ -50,11 +50,17 @@ main {
     border-radius: 20px;
     box-shadow: 0px 0px 10px 0px #35413581;
     cursor: pointer;
+    align-self: center;
 }
 
 .ods-img:hover {
     transform: scale(1.1);
     transition: 0.5s;
+}
+
+.ods-text{
+    font-style: italic;
+    margin-bottom: 7px;
 }
 
 .textos {
@@ -127,6 +133,11 @@ thead th {
     padding: 10px;
 }
 
+.destaque {
+    background-color: #dbe7dde2; 
+    font-weight: bold; 
+}
+
 th,
 td {
     padding: 8px;
@@ -140,4 +151,10 @@ th.sub, td {
 
 td:nth-child(2), th.sub:nth-child(2) {
     border-left: 0.6px solid  #b8b8b8; 
+}
+
+ul.ods-list{
+    list-style: disc;
+    margin-left: 17px;
+    font-size: 14px;
 }
