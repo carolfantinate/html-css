@@ -11,7 +11,7 @@
      margin: auto;
      border-radius: 10px;
      box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
-     padding: 20px;
+     padding: 20px 50px;
  }
 
  h1 {
@@ -31,7 +31,6 @@
      padding: 8px 12px;
      border: 1px solid #333;
      border-radius: 5px;
-     cursor: default;
  }
 
  .mes.atual {
